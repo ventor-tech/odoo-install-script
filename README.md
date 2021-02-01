@@ -25,14 +25,14 @@ There are a few things you can configure, this is the most used list:
 - PG_VERSION - is a version of postgresql installed
 
 3. **Become root**
-```
+```shell
 su
 ```
 4. **Make the script executable**
-```
+```shell
 chmod +x run.sh
 ```
 5. **Execute the script:**
-```
+```shell
 ./run.sh
 ```
