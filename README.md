@@ -1,7 +1,7 @@
 <h3>Installation procedure</h3>
 
 1. **Download the script:**
-```
+```Shell
 git clone -b All git@git.xpansa.com:external/installscript.git
 cd installscript/odoo_install
 git checkout All
@@ -25,14 +25,14 @@ There are a few things you can configure, this is the most used list:
 - PG_VERSION - is a version of postgresql installed
 
 3. **Become root**
-```shell
+```Shell
 su
 ```
 4. **Make the script executable**
-```shell
+```Shell
 chmod +x run.sh
 ```
 5. **Execute the script:**
-```shell
+```Shell
 ./run.sh
 ```
