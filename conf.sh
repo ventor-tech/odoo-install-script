@@ -32,9 +32,9 @@ HTTP_PROTOCOL="https"
 HTTPS_PORT="443"
 INSTALL_CERTIFICATE="False"
 PUBLIC_IP="" # SET MANUALLY
-DOMAIN_NAME="demo.ventor.tech" # DNS SHOULD BE ALREADY CONFIGURED!
+DOMAIN_NAME="" # DNS SHOULD BE ALREADY CONFIGURED!
 DOMAIN_ALIASES=() # ("www.demo.ventortech.com" "zzz.demo.ventortech.com")
-LE_EMAIL="ssl@ventor.tech"
+LE_EMAIL="@mail"
 LE_CRON_SCRIPT="/etc/cron.daily/certbot-renew"
 
 if [ $IS_ENTERPRISE = "True" ]; then
