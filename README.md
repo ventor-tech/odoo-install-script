@@ -2,8 +2,7 @@
 
 1. **Download the script:**
 ```text
-git clone -b All git@github.com/ventor-tech/odoo-install-scriptl
-git checkout All
+git clone https://github.com/ventor-tech/odoo-install-script
 ```
 2. **Modify the parameters as you wish.**
 There are a few things you can configure, this is the most used list:
