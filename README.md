@@ -28,9 +28,9 @@ su
 ```
 4. **Make the script executable**
 ```text
-chmod +x run.sh
+sudo chmod +x run.sh
 ```
 5. **Execute the script:**
 ```text
-./run.sh
+sudo ./run.sh
 ```
