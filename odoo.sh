@@ -74,7 +74,7 @@ if [ ! -d "$OE_INSTALL_DIR/env" ]; then
 fi
 
 source $OE_INSTALL_DIR/env/bin/activate
-sudo apt-get install libicu-dev libxml2-dev libxslt1-dev libsasl2-dev libldap2-dev libssl-dev zlib1g-dev -y
+sudo apt-get install libicu-dev libpq-dev libxml2-dev libxslt1-dev libsasl2-dev libldap2-dev libssl-dev zlib1g-dev -y
 pip install --upgrade pip
 
 if [[ -f $OE_REPO/requirements.txt ]]; then
