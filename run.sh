@@ -42,7 +42,7 @@ echo -e "\n---- Update Server ----"
 sudo apt-get update
 sudo apt-get upgrade -y
 
-sudo apt-get install git wget build-essential dnsutils lsb-release software-properties-common sudo libffi-dev -y
+sudo apt-get install git wget build-essential dnsutils lsb-release software-properties-common sudo -y
 
 source db.sh
 
