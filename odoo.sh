@@ -37,14 +37,18 @@ sudo npm install -g less less-plugin-clean-css
 #--------------------------------------------------
 
 INSTALL_WKHTMLTOPDF_VERSION=`wkhtmltopdf --version`
+WKHTMLTOPDF_VERSION="0.12.6-1"
 if [ $INSTALL_WKHTMLTOPDF = "True" ] && [ -z "$INSTALL_WKHTMLTOPDF_VERSION" ]; then
   echo -e "\n---- Install wkhtml and place shortcuts on correct place for ODOO $OE_VERSION ----"
 
   OS_RELEASE=$(awk -F= '$1=="VERSION_CODENAME" { print $2 ;}' /etc/os-release)
-  if [ "`getconf LONG_BIT`" == "64" ];then
-      _url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1."$OS_RELEASE"_amd64.deb
-  else
-      _url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1."$OS_RELEASE"_i386.deb
+  ARCHITECTURE=$(arch)
+  if [ "$ARCHITECTURE" == "amd64" ];then
+      _url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/$WKHTMLTOPDF_VERSION/wkhtmltox_"$WKHTMLTOPDF_VERSION"."$OS_RELEASE"_amd64.deb
+  elif [ "$ARCHITECTURE" == "i386" ];then
+      _url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/$WKHTMLTOPDF_VERSION/wkhtmltox_"$WKHTMLTOPDF_VERSION"."$OS_RELEASE"_i386.deb
+  elif [ "$ARCHITECTURE" == "aarch64" ];then
+        _url=https://github.com/wkhtmltopdf/packaging/releases/download/$WKHTMLTOPDF_VERSION/wkhtmltox_"$WKHTMLTOPDF_VERSION"."$OS_RELEASE"_arm64.deb
   fi
   wget $_url
   sudo dpkg -i `basename $_url`
