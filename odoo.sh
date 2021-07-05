@@ -40,7 +40,7 @@ INSTALL_WKHTMLTOPDF_VERSION=`wkhtmltopdf --version`
 if [ $INSTALL_WKHTMLTOPDF = "True" ] && [ -z "$INSTALL_WKHTMLTOPDF_VERSION" ]; then
   echo -e "\n---- Install wkhtml and place shortcuts on correct place for ODOO $OE_VERSION ----"
 
-  OS_RELEASE=`lsb_release -sc`
+  OS_RELEASE=$(awk -F= '$1=="VERSION_CODENAME" { print $2 ;}' /etc/os-release)
   if [ "`getconf LONG_BIT`" == "64" ];then
       _url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1."$OS_RELEASE"_amd64.deb
   else
