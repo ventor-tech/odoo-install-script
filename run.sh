@@ -80,8 +80,7 @@ echo "Odoo Logs: $OE_LOG_PATH/odoo-server.log"
 echo "Odoo Master Password: $OE_SUPERADMIN"
 if [ $WEB_SERVER = "nginx" ]; then
     echo "Nginx Odoo Site: /etc/nginx/sites-available/$OE_WEBSERV_CONF"
-fi
-if [ $WEB_SERVER = "apache2" ]; then
+elif [ $WEB_SERVER = "apache2" ]; then
     echo "Apache Odoo Site: /etc/apache2/sites-available/$OE_WEBSERV_CONF"
 fi
 if [ $HTTP_PROTOCOL = "https" ] || [ $INSTALL_CERTIFICATE = "True" ]; then
