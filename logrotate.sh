@@ -9,7 +9,7 @@ echo -e "Install logrotate"
     #--------------------------------------------------
     sudo apt-get install -y logrotate
 
-cat <<EOF > /etc/logrotate.d/odoo
+cat << EOF | sudo tee -a /etc/logrotate.d/odoo
 #Path odoo logs
    $OE_LOG_PATH/*.log {
         rotate 5
