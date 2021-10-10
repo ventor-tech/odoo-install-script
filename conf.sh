@@ -55,7 +55,7 @@ else
     OE_TEXT="Community"
 fi
 
-if [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ]; then
+if [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ] || [ $OE_VERSION = "15.0" ]; then
     PYTHON_VERSION="3"
 else
     PYTHON_VERSION="2"
