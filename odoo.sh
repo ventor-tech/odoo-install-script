@@ -2,7 +2,7 @@
 #--------------------------------------------------
 # Install Dependencies
 #--------------------------------------------------
-if [ $OE_VERSION = "10.0" ] || [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ]; then
+if [ $OE_VERSION = "10.0" ] || [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ] || [ $OE_VERSION = "15.0" ]; then
     OE_BIN="odoo-bin"
 else
     OE_BIN="openerp-server"
