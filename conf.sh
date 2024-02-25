@@ -2,7 +2,7 @@
 ##fixed parameters
 #odoo
 
-OE_VERSION="14.0"
+OE_VERSION="17.0"
 OE_INSTALL_DIR="$OE_HOME/$OE_VERSION"
 OE_REPO="$OE_INSTALL_DIR/odoo"
 #Set to true if you want to install it, false if you don't need it or have it already installed.
@@ -17,24 +17,24 @@ OE_WORKERS="4"
 # Set this to True if you want to install Odoo Enterprise!
 IS_ENTERPRISE="False"
 #set the superadmin password
-OE_SUPERADMIN="admin"
+OE_SUPERADMIN="r@m@n101"
 
 INSTALL_PG_SERVER="True" # if false, than only client will be installed
 OE_DB_HOST="localhost"
 OE_DB_PORT="5432"
 OE_DB_USER="odoo"
-OE_DB_PASSWORD="odoo"
-PG_VERSION=12
+OE_DB_PASSWORD="r@m@n777"
+PG_VERSION=16
 
 WEB_SERVER="nginx" # or "apache2"
 
 HTTP_PROTOCOL="https"
 HTTPS_PORT="443"
-INSTALL_CERTIFICATE="False"
-PUBLIC_IP="" # SET MANUALLY
-DOMAIN_NAME="" # DNS SHOULD BE ALREADY CONFIGURED!
-DOMAIN_ALIASES=() # ("www.demo.ventortech.com" "zzz.demo.ventortech.com")
-LE_EMAIL="@mail"
+INSTALL_CERTIFICATE="True"
+PUBLIC_IP="92.205.230.146" # SET MANUALLY
+DOMAIN_NAME="admin.mooldhi.com" # DNS SHOULD BE ALREADY CONFIGURED!
+DOMAIN_ALIASES=("www.mooldhi.com" "mooldhi.com" ) # ("www.demo.ventortech.com" "zzz.demo.ventortech.com")
+LE_EMAIL="pandeyraman10@gmail.com"
 LE_CRON_SCRIPT="/etc/cron.daily/certbot-renew"
 
 if [ $IS_ENTERPRISE = "True" ]; then
@@ -55,7 +55,7 @@ else
     OE_TEXT="Community"
 fi
 
-if [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ] || [ $OE_VERSION = "15.0" ]; then
+if [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ] || [ $OE_VERSION = "15.0" ]|| [ $OE_VERSION = "16.0" ] || [ $OE_VERSION = "17.0" ]; then
     PYTHON_VERSION="3"
 else
     PYTHON_VERSION="2"
